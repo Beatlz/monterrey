@@ -3,11 +3,12 @@ require(`module-alias/register`)
 import NoteType from "@/types/NoteType"
 import ScaleType from "@/types/ScaleType"
 import notes from "@resources/notes"
+import sharpToFlat from "@modules/sharpToFlat"
 
-const { flat, sharp } = notes
+const { flat } = notes
 
 const buildScale = (note: NoteType, template: number[]): ScaleType => {
-	note = note.includes(`#`) ? flat[sharp.indexOf(note)] : note
+	note = sharpToFlat(note)
   
 	const root = flat.indexOf(note)
 	const scale: ScaleType = []
