@@ -1,5 +1,7 @@
 require(`module-alias/register`)
 
-type ScaleNameType = `chromatic` | `blues` | `maj` | `m` | `harmonic` | `pentatonic` | `ionian` | `dorian` | `phrygian` | `lydian` | `mixolydian` | `aeolian` | `locrian`
+import scaleTemplates from "@resources/scaleTemplates"
+
+type ScaleNameType = keyof typeof scaleTemplates
 
 export default ScaleNameType
