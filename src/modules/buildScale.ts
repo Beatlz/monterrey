@@ -11,11 +11,9 @@ const buildScale = (note: NoteType, template: number[]): ScaleType => {
 	note = sharpToFlat(note)
   
 	const root = flat.indexOf(note)
-	const scale: ScaleType = []
+	const scale: ScaleType = template.map(step => step + root > 11 ? flat[step - 12] : flat[step])
 
-	template.map(step => step + root > 11 ? flat[step - 12] : flat[step])
-
-	return scale
+	return [note, ...scale]
 }
 
 export default buildScale
