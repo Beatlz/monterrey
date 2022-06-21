@@ -18,9 +18,6 @@ const buildScale = (note: NoteType, template: number[]): ScaleType => {
 		return step + root > (length - 1) ? flat[step - length + root] : flat[step + root]
 	})
 
-	console.log([note, ...scale])
-	console.log(flat)
-
 	return [note, ...scale]
 }
 
