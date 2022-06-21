@@ -5,16 +5,16 @@ import buildChord from "@modules/buildChord"
 import scaleTemplates from "@resources/scaleTemplates"
 import chordTemplates from "@resources/chordTemplates"
 
-test(`Build scales given a template and a root note`, () => {
+test(`Build scales given a root note and a template`, () => {
 	const A_harmonicMinor = scaleTemplates[`harmonicMinor`]
+	const scale = buildScale(`A`, A_harmonicMinor)
   
-	expect(buildScale(`A`, A_harmonicMinor)).toBe([`A`, `B`, `C`, `D`, `E`, `F`, `Ab`])
-	expect(buildScale(`C`, [2, 4, 5, 7, 9, 11])).toBe([`C`, `D`, `E`, `F`, `G`, `A`, `B`])
+	expect(scale).toStrictEqual([`A`, `B`, `C`, `D`, `E`, `F`, `Ab`])
 })
 
-test(`Build chords given a template and a root note`, () => {
+test(`Build chords given a root note and a template`, () => {
 	const Abmaj9 = chordTemplates[`maj9`]
+	const chord = buildChord(`Ab`, Abmaj9)
   
-	expect(buildChord(`G#`, Abmaj9)).toBe([`Ab`, `Bb`, `C`, `Eb`, `G`])
-	expect(buildChord(`C`, [4, 7])).toBe([`C`, `E`, `G`])
+	expect(chord).toStrictEqual([`Ab`, `Bb`, `C`, `Eb`, `G`])
 })
