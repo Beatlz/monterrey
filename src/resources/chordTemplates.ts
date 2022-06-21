@@ -1,6 +1,6 @@
 require(`module-alias/register`)
 
-const chordTemplates: { [key: string]: number[] } = {
+const chordTemplates = {
 	"maj": [ 4, 7 ],
 	"m": [ 3, 7 ],
 	"2": [ 2, 4, 7],
