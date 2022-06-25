@@ -29,6 +29,7 @@
     "@constants": "dist/constants/",
     "@modules": "dist/modules/",
     "@resources": "dist/resources/",
+    "@sequencer": "dist/sequencer/",
     "@tests": "dist/tests/",
     "@types": "dist/types/",
     "@utility": "dist/utility/"

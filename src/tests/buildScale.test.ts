@@ -6,7 +6,7 @@ import scaleTemplates from "@resources/scaleTemplates"
 import chordTemplates from "@resources/chordTemplates"
 
 test(`Build scales given a root note and a template`, () => {
-	const A_harmonicMinor = scaleTemplates[`harmonicMinor`]
+	const A_harmonicMinor = scaleTemplates[`harmonicMin`]
 	const scale = buildScale(`A`, A_harmonicMinor)
   
 	expect(scale).toStrictEqual([`A`, `B`, `C`, `D`, `E`, `F`, `Ab`])
