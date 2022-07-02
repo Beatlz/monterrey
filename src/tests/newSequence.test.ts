@@ -13,6 +13,6 @@ test(`Test the `, () => {
 	const sequencer = new Sequencer(sequenceOptions)
 	const scale = getScale(sequenceOptions.key, sequenceOptions.scaleName)
 
-	expect(sequencer.sequence.length).toBe(sequenceOptions.steps)
-	expect(sequencer.sequence[0].length).toBe(scale.length * 3)
+	expect(sequencer.sequenceGrid.length).toBe(sequenceOptions.steps)
+	expect(sequencer.sequenceGrid[0].length).toBe(scale.length * 3)
 })
